@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'calculator_controller.dart';
+import 'km_miles_converter.dart';
 
 void main() {
   runApp(CalculatorApp());
@@ -78,6 +79,15 @@ class _CalculatorUIState extends State<CalculatorUI> {
                 _buildButtonRow(['C', '0', '=', '+']),
               ],
             ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => KmMilesConverter()),
+              );
+            },
+            child: Text('Ava teisendaja ekraan'),
           ),
         ],
       ),
